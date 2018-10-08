@@ -74,7 +74,7 @@ bool buscarfilas(int M[9][9]){
     }
 }
 
-bool buscarcuadrante(int M[9][9],int M1[9][9]){
+int cambiarcuadranteamatriz(int M[9][9],int M1[9][9]){
     for (int i=0;i<9;i++){
         for (int j=0;j<9;j++){
             if (i<3&&j<3){  //1
@@ -99,6 +99,11 @@ bool buscarcuadrante(int M[9][9],int M1[9][9]){
 
         }
     }
+    return 0;
+}
+
+bool buscarcuadrante(int M[9][9],int M1[9][9]){
+    cambiarcuadranteamatriz(M,M1);
     buscarfilas(M1);
     return true;
 }
