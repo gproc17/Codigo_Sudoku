@@ -23,6 +23,36 @@
 
 using namespace std;
 
+void imprimir_matriz_9x9(int matriz[9][9]){
+    char x=0;
+    cout << "Ingresar un borde: " << endl;
+    cin >> x;
+    for (int i=0; i<19; i++){
+        cout << x;
+    }
+    cout << endl;
+    for (int i=0; i<9;++i){
+        for(int j=0;j<9; ++j){
+
+            if (j==2||j==5||j==8)
+                cout  << matriz[i][j] << x;
+            else if (j==0)
+                cout  << x <<matriz[i][j] <<"|";
+            else
+                cout  << matriz[i][j] << "|";
+        }
+        cout<<endl;
+        if (i==2||i==5||i==8) {
+            for (int i=0; i<19; i++) {
+                cout << x;
+            }
+            cout << endl;
+        } else{
+            cout << x << "-+-+-" << x << "-+-+-" << x<< "-+-+-" << x<<endl;
+        }
+    }
+}
+
 bool buscarfilas(int M[9][9]){
     for (int i=0;i<9;i++){
         for (int j=0;j<9;j++){
@@ -86,12 +116,14 @@ int main() {
             cin>>M[i][j];
         }
     }
+    imprimir_matriz_9x9(M);
     if (buscarfilas(M)== false || buscarcuadrante(M,M1) == false)
-        cout<<"No es sudoku";
+        cout<<"no es sudoku";
     else
-        cout<<"Es sudoku";
+        cout<<"es sudoku";
     return 0;
 }
+
 
 
 2 1 7 3 5 8 6 9 4
