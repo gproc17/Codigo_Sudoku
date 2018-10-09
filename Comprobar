@@ -87,9 +87,9 @@ int main() {
         }
     }
     if (buscarfilas(M)== false || buscarcuadrante(M,M1) == false)
-        cout<<"no es sudoku";
+        cout<<"No es sudoku";
     else
-        cout<<"es sudoku";
+        cout<<"Es sudoku";
     return 0;
 }
 
