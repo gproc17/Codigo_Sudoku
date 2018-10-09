@@ -141,7 +141,7 @@ bool buscarcuadrante(int M[9][9],int M1[9][9]){
 
 int main() {
     char a;
-    cout<<"Si quiere imprimir el teblero escriba '0', de lo contrario escriba cuelquier número";
+    cout<<"Si quiere imprimir el teblero escriba '0', de lo contrario escriba cuelquier número"<<endl;
     cin>>a;
     const int n1 = 9;
     const int m1 = 9;
